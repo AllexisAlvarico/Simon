@@ -11,6 +11,7 @@ Game::Game() :
 {
 	setupFontAndText(); // load font 
 	setupSprite(); // load texture
+	setupScene();
 }
 
 
@@ -78,9 +79,10 @@ void Game::update(sf::Time t_deltaTime)
 /// </summary>
 void Game::render()
 {
-	m_window.clear(sf::Color::White);
-	m_window.draw(m_welcomeMessage);
-	m_window.draw(m_logoSprite);
+	m_window.clear(sf::Color::Black);
+	m_window.draw(redSquare);
+	//m_window.draw(m_welcomeMessage);
+	//m_window.draw(m_logoSprite);
 	m_window.display();
 }
 
@@ -116,4 +118,13 @@ void Game::setupSprite()
 	}
 	m_logoSprite.setTexture(m_logoTexture);
 	m_logoSprite.setPosition(300.0f, 180.0f);
+}
+
+void Game::setupScene()
+
+{
+	redSquare.setSize(sf::Vector2f(200, 200));
+	redSquare.setFillColor(sf::Color::Red);
+	redSquare.setPosition(570, 30);
+
 }
