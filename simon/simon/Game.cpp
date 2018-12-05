@@ -81,6 +81,10 @@ void Game::render()
 {
 	m_window.clear(sf::Color::Black);
 	m_window.draw(redSquare);
+	m_window.draw(yellowSquare);
+	m_window.draw(greenSquare);
+	m_window.draw(blueSquare);
+
 	//m_window.draw(m_welcomeMessage);
 	//m_window.draw(m_logoSprite);
 	m_window.display();
@@ -127,4 +131,15 @@ void Game::setupScene()
 	redSquare.setFillColor(sf::Color::Red);
 	redSquare.setPosition(570, 30);
 
+	yellowSquare.setSize(sf::Vector2f(200, 200));
+	yellowSquare.setFillColor(sf::Color::Yellow);
+	yellowSquare.setPosition(350, 250);
+
+	greenSquare.setSize(sf::Vector2f(200, 200));
+	greenSquare.setFillColor(sf::Color::Green);
+	greenSquare.setPosition(350, 30);
+
+	blueSquare.setSize(sf::Vector2f(200, 200));
+	blueSquare.setFillColor(sf::Color::Blue);
+	blueSquare.setPosition(570, 250);
 }

@@ -31,6 +31,9 @@ private:
 	sf::Texture m_logoTexture; // texture used for sfml logo
 	sf::Sprite m_logoSprite; // sprite used for sfml logo
 	sf::RectangleShape redSquare;
+	sf::RectangleShape yellowSquare;
+	sf::RectangleShape greenSquare;
+	sf::RectangleShape blueSquare;
 	bool m_exitGame; // control exiting game
 
 };
