@@ -80,10 +80,11 @@ void Game::update(sf::Time t_deltaTime)
 void Game::render()
 {
 	m_window.clear(sf::Color::Black);
-	m_window.draw(redSquare);
-	m_window.draw(yellowSquare);
-	m_window.draw(greenSquare);
-	m_window.draw(blueSquare);
+	m_window.draw(m_redSquare);
+	m_window.draw(m_yellowSquare);
+	m_window.draw(m_greenSquare);
+	m_window.draw(m_blueSquare);
+	m_window.draw(m_title);
 
 	//m_window.draw(m_welcomeMessage);
 	//m_window.draw(m_logoSprite);
@@ -99,14 +100,21 @@ void Game::setupFontAndText()
 	{
 		std::cout << "problem loading arial black font" << std::endl;
 	}
-	m_welcomeMessage.setFont(m_ArialBlackfont);
+	/*m_welcomeMessage.setFont(m_ArialBlackfont);
 	m_welcomeMessage.setString("SFML Game");
 	m_welcomeMessage.setStyle(sf::Text::Underlined | sf::Text::Italic | sf::Text::Bold);
 	m_welcomeMessage.setPosition(40.0f, 40.0f);
 	m_welcomeMessage.setCharacterSize(80);
 	m_welcomeMessage.setOutlineColor(sf::Color::Red);
 	m_welcomeMessage.setFillColor(sf::Color::Black);
-	m_welcomeMessage.setOutlineThickness(3.0f);
+	m_welcomeMessage.setOutlineThickness(3.0f);*/
+	
+	m_title.setFont(m_ArialBlackfont);
+	m_title.setString("S I M O N");		
+	m_title.setPosition(40.0f, 40.0f);
+	m_title.setCharacterSize(48);
+	m_title.setFillColor(sf::Color::White);
+ 
 
 }
 
@@ -127,19 +135,19 @@ void Game::setupSprite()
 void Game::setupScene()
 
 {
-	redSquare.setSize(sf::Vector2f(200, 200));
-	redSquare.setFillColor(sf::Color::Red);
-	redSquare.setPosition(570, 30);
+	m_redSquare.setSize(sf::Vector2f(200, 200));
+	m_redSquare.setFillColor(sf::Color::Red);
+	m_redSquare.setPosition(570, 30);
 
-	yellowSquare.setSize(sf::Vector2f(200, 200));
-	yellowSquare.setFillColor(sf::Color::Yellow);
-	yellowSquare.setPosition(350, 250);
+	m_yellowSquare.setSize(sf::Vector2f(200, 200));
+	m_yellowSquare.setFillColor(sf::Color::Yellow);
+	m_yellowSquare.setPosition(350, 250);
 
-	greenSquare.setSize(sf::Vector2f(200, 200));
-	greenSquare.setFillColor(sf::Color::Green);
-	greenSquare.setPosition(350, 30);
+	m_greenSquare.setSize(sf::Vector2f(200, 200));
+	m_greenSquare.setFillColor(sf::Color::Green);
+	m_greenSquare.setPosition(350, 30);
 
-	blueSquare.setSize(sf::Vector2f(200, 200));
-	blueSquare.setFillColor(sf::Color::Blue);
-	blueSquare.setPosition(570, 250);
+	m_blueSquare.setSize(sf::Vector2f(200, 200));
+	m_blueSquare.setFillColor(sf::Color::Blue);
+	m_blueSquare.setPosition(570, 250);
 }
