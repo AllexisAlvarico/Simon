@@ -85,6 +85,10 @@ void Game::render()
 	m_window.draw(m_greenSquare);
 	m_window.draw(m_blueSquare);
 	m_window.draw(m_title);
+	m_window.draw(m_redText);
+	m_window.draw(m_blueText);
+	m_window.draw(m_yellowText);
+	m_window.draw(m_greenText);
 
 	//m_window.draw(m_welcomeMessage);
 	//m_window.draw(m_logoSprite);
@@ -100,6 +104,10 @@ void Game::setupFontAndText()
 	{
 		std::cout << "problem loading arial black font" << std::endl;
 	}
+	if (!m_ImpactFont.loadFromFile("ASSETS\\FONTS\\impact.ttf"))
+	{
+		std::cout << "problem loading impact font" << std::endl;
+	}
 	/*m_welcomeMessage.setFont(m_ArialBlackfont);
 	m_welcomeMessage.setString("SFML Game");
 	m_welcomeMessage.setStyle(sf::Text::Underlined | sf::Text::Italic | sf::Text::Bold);
@@ -114,7 +122,34 @@ void Game::setupFontAndText()
 	m_title.setPosition(40.0f, 40.0f);
 	m_title.setCharacterSize(48);
 	m_title.setFillColor(sf::Color::White);
- 
+
+
+	m_greenText.setFont(m_ImpactFont);
+	m_greenText.setString("Press green for \n an easy game");
+	m_greenText.setPosition(40.0f, 130.0f);
+	m_greenText.setCharacterSize(32);
+	m_greenText.setFillColor(sf::Color::Green);
+
+	m_redText.setFont(m_ImpactFont);
+	m_redText.setString("Press red for \n a medium game");
+	m_redText.setPosition(40.0f, 220.0f);
+	m_redText.setCharacterSize(32);
+	m_redText.setFillColor(sf::Color::Red);
+
+	m_yellowText.setFont(m_ImpactFont);
+	m_yellowText.setString("Press yellow for \n a hard game");
+	m_yellowText.setPosition(40.0f, 300.0f);
+	m_yellowText.setCharacterSize(32);
+	m_yellowText.setFillColor(sf::Color::Yellow);
+
+	m_blueText.setFont(m_ImpactFont);
+	m_blueText.setString("Press blue to \n exit the game");
+	m_blueText.setPosition(40.0f, 400.0f);
+	m_blueText.setCharacterSize(32);
+	m_blueText.setFillColor(sf::Color::Blue);
+
+
+
 
 }
 

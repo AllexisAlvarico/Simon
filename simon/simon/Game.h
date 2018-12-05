@@ -27,6 +27,7 @@ private:
 
 	sf::RenderWindow m_window; // main SFML window
 	sf::Font m_ArialBlackfont; // font used by message
+	sf::Font m_ImpactFont; // font used by message
 	sf::Text m_welcomeMessage; // text used for message on screen
 	sf::Text m_title;
 	sf::Text m_greenText;
